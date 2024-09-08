@@ -20,7 +20,10 @@ export const RouterContext = createContext<RouterHandle>(defaultValue);
 
 export const Router = ({ children }: RouterProps) => {
     
-    const [route, setRoute] = useState<Route>('/');
+    const [route, setRoute] = useState<Route>(() => {
+        const path = window.location.pathname;
+        return path === '/'? '/' : path.slice(1) as Route;
+    });
 
     const routerHandle: RouterHandle = {
         route: route,

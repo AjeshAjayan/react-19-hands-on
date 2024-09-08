@@ -22,7 +22,7 @@ export const Router = ({ children }: RouterProps) => {
     
     const [route, setRoute] = useState<Route>(() => {
         const path = window.location.pathname;
-        return path === '/'? '/' : path.slice(1) as Route;
+        return path === '/' ? '/' : path.slice(1) as Route;
     });
 
     const routerHandle: RouterHandle = {

@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+
+  nav {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+
+    ul {
+      list-style: none;
+      display: inline-flex;
+      gap: 0.5rem;
+    }
+  }
+}
